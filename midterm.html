@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bus Booking Website</title>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<style>
+body {
+font-family: Arial, sans-serif;
+margin: 0;
+padding: 0;
+background: #f4f4f4;
+}
+header {
+background: darkblue;
+color: white;
+padding: 10px 20px;
+text-align: center;
+}
+nav ul {
+list-style-type: none;
+padding: 0;
+}
+nav ul li {
+display: inline;
+margin-right: 10px;
+}
+nav ul li a {
+color: white;
+text-decoration: none;
+}
+.content {
+padding: 20px;
+background: lightblue;
+margin: 10px;
+border-radius: 8px;
+}
+footer {
+text-align: center;
+padding: 10px 0;
+background: darkblue;
+color: white;
+position: fixed;
+bottom: 0;
+width: 100%;
+}
+.cimage{
+padding-left: 35%;
+}
+.avail{
+color: green;
+}
+.unavail{
+color: red;
+}
+</style>
+</head>
+<body>
+<header>
+<h1>BUS BOOKING</h1>
+<nav>
+<ul>
+<li><a href="#about" class="tab-link" data-target="#about">About Us</a></li>
+<li><a href="#services" class="tab-link" data-target="#services">Services</a></li>
+<li><a href="#contact" class="tab-link" data-target="#contact">Contact</a></li>
+<li><a href="#login" class="tab-link" data-target="#login">Login</a></li>
+<li><a href="#booking" class="tab-link" data-target="#booking">Make
+Booking</a></li>
+<li><a href="#vouchers" class="tab-link" data-target="#vouchers">Vouchers</a></li>
+</ul>
+</nav>
+</header>
+<div id="img1" class="cimage"><img src="pic1" width="400"></div>
+<div id="about" class="content">
+<h2>About Us</h2>
+<p>Welcome to our Bus Booking Website. We are dedicated to providing the highest
+quality bus travel services to all of our customers.</p>
+</div>
+<div id="services" class="content">
+<h2>Services</h2>
+<p>We offer a range of quality buses.</p>
+</div>
+<div id="contact" class="content">
+<h2>Contact Us</h2>
+<p>You can contact us via email at info@busbookingabcd.com or call us at
+5555666677.</p>
+</div>
+<div id="login" class="content">
+<h2>Login</h2>
+Enter Username:
+<input type="text" id="username" value="Enter username"></input><BR>
+Enter Password:
+<input type="text" id="password" value="Enter password"><input><BR>
+Enter OTP:
+<input type="text" id="OTP" value="Enter OTP"></input><BR>
+</div>
+<div id="booking" class="content">
+<h2>Booking</h2>
+<div class="details">Enter source:
+<input type="text" name="source"><br>
+Enter destination:
+<input type="text" name="destination"><br>
+<button id="submit">submit</button>
+</div>
+<div class="avail">
+Availabe buses:
+<UL>
+<li>A1</li>
+<li>B1</li>
+<li>C2</li>
+</UL>
+</div>
+<div class="unavail">
+Not Availabe buses:
+<UL>
+<li>A2</li>
+<li>B2</li>
+<li>C1</li>
+</UL>
+</div>
+</div>
+<div id="vouchers" class="content">
+<h2>Your Vouchers</h2>
+<p>Here are the list of your Vouchers:-</p>
+<ul>
+<li>50%OFF</li>
+<li>FREE MEAL</li>
+<li>FREE UPGRADATION</li>
+<li>Rs. 150 OFF</li>
+</ul>
+</div>
+<footer>
+<p>2024 Bus Booking</p>
+</footer>
+<script>
+$('#about').show();
+$(document).ready(function() {
+$('#contact').click(function(event) {
+event.preventDefault();
+var target = $(this).data("#contact");
+$('.content').not(target).hide();
+$(target).fadeToggle(400);
+});
+$('#about').show();
+});
+</script>
+</body>
+</html>
